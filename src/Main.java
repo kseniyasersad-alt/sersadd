@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +13,8 @@ public class Main {
         Scanner in = new Scanner(System.in);
         short d =  in.nextShort();
         System.out.println(d);
+        Random random = new Random();
+
     }
 
 }
