@@ -60,6 +60,7 @@ public class Game {
                         board[(y - 1) * sizeBoard + x - 1] = " ";
                     }
                 }
+
                 int count_monster = sizeBoard * sizeBoard - sizeBoard - 1;
                 Random random1 = new Random();
                 for (int y = 0; y < sizeBoard; y++) {
