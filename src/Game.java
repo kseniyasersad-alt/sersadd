@@ -42,7 +42,7 @@ public class Game {
             String wall = " + —— + —— + —— + —— + —— + ";
             Random r = new Random();
             for (int y = 0; y < sizeBoard; y++) {
-                for (int x = 0; x < sizeBoard; x++);
+                for (int x = 0; x < sizeBoard; x++) ;
             }
             int countMonster = sizeBoard * sizeBoard - sizeBoard - 1;
             for (int i = 0; i <= countMonster; i++) {
@@ -76,37 +76,34 @@ public class Game {
                         System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY + "\nХод номер: " + step);
                     } else if (board[y - 1][x - 1].equals(castle)) {
                         System.out.println("Вы прошли игру!");
-                        break;
-                    } else {
-                        Random ii = new Random();
-                        int z = ii.nextInt(300);
-                        int i = ii.nextInt(300);
-                        int trueAnswer = z + i;
-                        System.out.println("Реши пример: " + z + " + " + i + " = ?");
-                        Scanner ug = new Scanner(System.in);
-                        int ans = ug.nextInt();
-                        if (trueAnswer == ans) {
-                            System.out.println("Верно! Ты победил монстра");
-                            personLife ++;
-                        } else {
-                            System.out.println("Ты проиграл эту битву!");
-                            personLife = personLife - 1;
-                            System.out.println("Жизней осталось: " + personLife);
+                        break;}
+                    else {
+                         Random ii = new Random();
+                            int z = ii.nextInt(300);
+                            int i = ii.nextInt(300);
+                            int trueAnswer = z + i;
+                            System.out.println("Решите задачу: " + z + " + " + i + " = ?");
+                            Scanner ug = new Scanner(System.in);
+                            int ans = ug.nextInt();
+                            if (trueAnswer == ans) {
+                                System.out.println("Верно! Ты победил монстра");
+                                personLife++;
+                                } else {
+                                personLife = personLife - 1;
+                                System.out.println("Ты проиграл эту битву. Жизней осталось: " + personLife);
+                                System.out.println("Закончились жизни. Итог: ...");}
+                                } if (personX == x && personY == y) {
+                            System.out.println("Координаты не изменены");
+                            } else {
+                            System.out.println("Почему ты не захотел со мной играть:(");
+                            System.out.println("До скорой встречи!!!");
                         }
+
+                        }
+
                     }
-                } else if (personX == x && personY == y) {
-                    System.out.println("Координаты не изменены");
-                } else {
-                    System.out.println("Почему ты не захотел со мной играть:(");
-                    System.out.println("До скорой встречи!!!");
                 }
             }
 
-            System.out.println("Закончились жизни. Итог: ...");
         }
-
     }
-
-}
-
-
