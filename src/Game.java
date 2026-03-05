@@ -21,7 +21,6 @@ public class Game {
         String begin = "|    | |";
         String end = " |    |";
         String castle = "\uD83C\uDFF0";
-
         Random random = new Random();
         if (answer.equals("Да")) {
             System.out.println("Поехали!");
@@ -69,27 +68,26 @@ public class Game {
                 if (x != personX && y != personY) {
                     System.out.println("Некорректный ход");
                 } else if (Math.abs(x - personX) == 1 || Math.abs(y - personY) == 1) {
-                    } else if (board[y - 1][x - 1].equals(castle)) {
-                        System.out.println("Вы прошли игру!");
-                        break;
+                } else if (board[y - 1][x - 1].equals(castle)) {
+                    System.out.println("Вы прошли игру!");
+                    break;
+                } else {
+                    System.out.println("Решите задачу:");
+                    if (taskMonster(personLine)) {
+                        board[personY - 1][personX - 1] = "  ";
+                        personX = x;
+                        personY = y;
                     } else {
-                        System.out.println("Решите задачу:");
-                        if (taskMonster(personLine)) {
-                            board[personY - 1][personX - 1] = "  ";
-                            personX = x;
-                            personY = y;
-                        } else {
-                            personLife--;
-                        }
-                        if (personLife == 0) {
-                            System.out.println("Закончились жизни. Итог: ...");
-                        }
-                        if (personX == x && personY == y) {
-                            System.out.println("Координаты не изменены");
-                        } else {
-                            System.out.println("Почему ты не захотел со мной играть:(");
-                            System.out.println("До скорой встречи!!!");
-                        }
+                        personLife--;
+                    }
+                    if (personLife == 0) {
+                        System.out.println("Закончились жизни. Итог: ...");
+                    }
+                    if (personX == x && personY == y) {
+                        System.out.println("Координаты не изменены");
+                    } else {
+                        System.out.println("Почему ты не захотел со мной играть:(");
+                        System.out.println("До скорой встречи!!!");
                     }
                 }
             }
@@ -113,8 +111,7 @@ public class Game {
             }
         }
         return true;
-
     }
-
-public void main() {
 }
+
+
