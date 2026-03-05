@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class BigMonster extends Monster {
     private String image =  "\uD83E\uDDDF\u200D";
 

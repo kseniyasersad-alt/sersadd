@@ -12,3 +12,4 @@ public class Person {
         return this.x == x && Math.abs(this.y - y) == 1 || this.y == y && Math.abs(this.x - x) == 1;
     }
 }
+
