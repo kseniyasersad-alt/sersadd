@@ -42,5 +42,6 @@ public class Monster {
         }
         System.out.println("Ты проиграл эту битву!");
         return false;
+
     }
 }

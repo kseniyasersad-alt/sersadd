@@ -11,10 +11,12 @@ public class Person {
         int n = ff.nextInt(sizeBoard);
         x = n == 0 ? 1 : n;
     }
+
     Person(int x, int y){
         this.x = x;
         this.y = y;
     }
+
     Person(){
         this(1, 1);
     }
