@@ -38,6 +38,7 @@ public class Game {
                     board[y][x] = "  ";
                 }
             }
+            int countGhost = 3;
             int countMonster = sizeBoard * sizeBoard - sizeBoard - 1;
             Monster[] arrMonster = new Monster[countMonster + 1];
             int count = 0;
@@ -90,7 +91,6 @@ public class Game {
                                     person.downLive();
                                 }
                                 break;
-
                             }
                         }
                     }
