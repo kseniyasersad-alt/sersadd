@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class BigMonster extends Monster {
+public class BigMonster extends Monsterextends Monster {
     private String image = "\uD83E\uDDDF\u200D";
 
     BigMonster(int sizeBoard) {
