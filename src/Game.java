@@ -43,22 +43,15 @@ public class Game {
             int countMonster = sizeBoard * sizeBoard - sizeBoard - 1;
             Monster[] arrMonster = new Monster[countMonster + 1];
             int count = 0;
-            Ghost test;
-            while (count <= countGhost) {
-                 if (r.nextBoolean()) {
-                    test = new Ghost(sizeBoard);
-                } else {
-
-                }
-                board[r.nextInt(sizeBoard - 1)][r.nextInt(sizeBoard)] = test.getImage();
-                Ghost[count] = test;
-                count++;
             Monster test;
             while (count <= countMonster) {
-                if (r.nextBoolean()) {
+                int w = random.nextInt(4);//0
+                if (w == 1) {
                     test = new Monster(sizeBoard);
-                } else {
+                } else if (w == 2){
                     test = new BigMonster(sizeBoard);
+                } else {
+                    test = new Ghost(sizeBoard);
                 }
                 board[r.nextInt(sizeBoard - 1)][r.nextInt(sizeBoard)] = test.getImage();
                 arrMonster[count] = test;
